@@ -1,0 +1,6 @@
+{
+  "token": "Your secret token goes here. Do not share it with anybody",
+  "owner": "The ID of whoever owns the bot",
+  "prefix": "Set the prefix here for calling the bot ",
+  "errorMessage": "Set a funny error message"
+}
