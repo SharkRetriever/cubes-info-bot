@@ -18,15 +18,25 @@ class CaseCommand extends Command {
                     prompt: 'What size of puzzle?',
                     type: 'integer',
                     validate: size => {
-                        let intSize = parseInt(size);
+                        const intSize = parseInt(size);
                         if (!isNaN(intSize) && MIN_SIZE <= intSize && intSize <= MAX_SIZE) return true;
-                        return `Invalid puzzle size (can only be ${MIN_SIZE} to ${MAX_SIZE})`
+                        return `Invalid puzzle size (can only be ${MIN_SIZE} to ${MAX_SIZE})`;
                     }
                 },
                 {
                     key: 'stage',
                     prompt: 'What stage?',
                     type: 'string',
+                    validate: stage => {
+                        const stages = "fl | f2l | ll | cll | ell | oll | ocll | oell | coll | ocell | wv | vh | els | cls | cmll | cross | f2l_3 | f2l_2 | f2l_sm | f2l_1 | f2b | line | 2x2x2 | 2x2x3".split(" | ");
+                        let valid = false;
+                        stages.forEach(function (pstage) {
+                            if (stage.startsWith(pstage))
+                                valid = true;
+                        });
+                        if (valid) return true;
+                        return "Invalid and/or missing stage mask. Did you forget to specify the view?";
+                    }
                 },
                 {
                     key: 'moves',
