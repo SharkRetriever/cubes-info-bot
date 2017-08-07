@@ -1,5 +1,7 @@
 {
     "MIN_SIZE": "2",
     "MAX_SIZE": "7",
-    "DEFAULT_SIZE": "3"
+    "DEFAULT_SIZE": "3",
+    "VISUALCUBE_DEFAULT_SIZE": "3",
+    "DISPLAY_SIZE": "300"
 }
