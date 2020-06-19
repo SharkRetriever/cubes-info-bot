@@ -1,4 +1,9 @@
-## cubes-info-bot ##
+## [DEPRECATED] cubes-info-bot ##
+
+This repository has been deprecated for the following reason:  
+The repository depends on [VisualCube](http://stachu.cubing.net/v/visualcube.php), which does not exist anymore, to generate the cube images.
+
+----------
 
 ### What is this? When would I use it? ###
 
